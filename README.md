@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SemLookP Widgets Demonstration
+A simple Next.js project to demonstrate the integration of a SemLookP widget.
 
-## Getting Started
+For this demo, a Next.js app was set up in Pycharm with `Node.js v18.17.0` and `React ^18`. 
+The package and peer dependencies in this example project were installed with the 
+`--legacy-peer-deps` flag which may lead to problems. To ensure the expected 
+behavior, following package versions should be used: 
+```
+"peerDependencies": {
+    "@elastic/datemath": "^5.0.3",
+    "@elastic/eui": "^62.1.0",
+    "@emotion/react": "^11.10.0",
+    "axios": "^1.1.2",
+    "moment": "^2.29.4",
+    "prop-types": "^15.8.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "^3.39.2"
+  }
+```
 
-First, run the development server:
+To install a widget in the project follow these steps:
+1) Create an .npmrc file in root directory with your PAT (TOKEN)
+```
+//npm.pkg.github.com/:_authToken=TOKEN
+@nfdi4health:registry=https://npm.pkg.github.com
+```
+3) Install peer dependencies
+```
+npm install @elastic/eui @elastic/datemath @emotion/react moment prop-types react-query react-query axios
+```
+2) Install the package
+```
+npm install @nfdi4health/semlookp-widgets
+```
+4) Wrap components with the Elastic UI Provider (required for the ElasticUI design library)
+```
+import {EuiProvider} from "@elastic/eui";
+<EuiProvider>YOUR COMPONENTS</EuiProvider>
+```
+5) Wrap the components in a QueryClientProvider (required for the react-query library)
+```
+import {QueryClient, QueryClientProvider} from "react-query";
+const queryClient = new QueryClient();
+<QueryClientProvider client={queryClient}>YOUR COMPONENTS</QueryClientProvider>
+```
+6) Import light theme (styling)
+```
+import "@elastic/eui/dist/eui_theme_light.css";
+```
+7) Add widget
+```
+<AutocompleteWidget
+api="https://semanticlookup.zbmed.de/ols/api/"
+hasShortSelectedLabel
+parameter="ontology=mesh,efo&type=class&collection=nfdi4health"
+placeholder="Search for Term"
+selectionChangedEvent={function noRefCheck() {
+}}
+allowCustomTerms={false}/>
+```
+
+
+
+To run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
