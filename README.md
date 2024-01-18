@@ -18,18 +18,30 @@ behavior, following package versions should be used:
     "react-query": "^3.39.2"
   }
 ```
+## Start the demo application
 
-To install a widget in the project follow these steps:
+Before starting the application the first time please execute the steps 1.-3. 
+from the installation instructions.
+
+To run the development server:
+```bash
+npm run dev
+```
+
+## Install instructions
+
+To use a widget in an application follow these steps:
+
 1) Create an .npmrc file in root directory with your PAT (TOKEN)
 ```
 //npm.pkg.github.com/:_authToken=TOKEN
 @nfdi4health:registry=https://npm.pkg.github.com
 ```
-3) Install peer dependencies
+2) Install peer dependencies
 ```
 npm install @elastic/eui @elastic/datemath @emotion/react moment prop-types react-query react-query axios
 ```
-2) Install the package
+3) Install the package
 ```
 npm install @nfdi4health/semlookp-widgets
 ```
@@ -62,9 +74,5 @@ allowCustomTerms={false}/>
 
 
 
-To run the development server:
 
-```bash
-npm run dev
-```
 
