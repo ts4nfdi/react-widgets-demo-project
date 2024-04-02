@@ -41,6 +41,9 @@ To use a widget in an application follow these steps:
 ```
 npm install @elastic/eui @elastic/datemath @emotion/react moment prop-types react-query react-query axios
 ```
+
+For dependency issues, try installing with the `--legacy-peer-deps` flag.
+
 3) Install the package
 ```
 npm install @nfdi4health/semlookp-widgets
