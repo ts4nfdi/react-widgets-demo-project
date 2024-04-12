@@ -6,17 +6,12 @@ The package and peer dependencies in this example project were installed with th
 `--legacy-peer-deps` flag which may lead to problems. To ensure the expected 
 behavior, following package versions should be used: 
 ```
-"peerDependencies": {
-    "@elastic/datemath": "^5.0.3",
-    "@elastic/eui": "^62.1.0",
-    "@emotion/react": "^11.10.0",
-    "axios": "^1.1.2",
-    "moment": "^2.29.4",
-    "prop-types": "^15.8.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+  "peerDependencies": {
+    "@emotion/react": "^11.11.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-query": "^3.39.2"
-  }
+  },
 ```
 ## Start the demo application
 
@@ -39,7 +34,7 @@ To use a widget in an application follow these steps:
 ```
 2) Install peer dependencies
 ```
-npm install @elastic/eui @elastic/datemath @emotion/react moment prop-types react-query react-query axios
+npm install @elastic/eui@62.1.0 @emotion/react@11.11.3 react@17.0.2 react-dom@17.0.2 react-query@3.39.2
 ```
 
 For dependency issues, try installing with the `--legacy-peer-deps` flag.
