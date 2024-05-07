@@ -1,76 +1,24 @@
-# SemLookP Widgets Demonstration
-A simple Next.js project to demonstrate the integration of a SemLookP widget.
+# Terminology Service Widgets Demonstration
+A simple Next.js project to demonstrate the integration of the Terminology Service Suite widgets.
 
-For this demo, a Next.js app was set up in Pycharm with `Node.js v18.17.0` and `React ^18`. 
-The package and peer dependencies in this example project were installed with the 
-`--legacy-peer-deps` flag which may lead to problems. To ensure the expected 
-behavior, following package versions should be used: 
+For this demo, a Next.js app was set up in Pycharm with `Node.js v18.17.0`.
+
+## Install and run the demo application
+
+1) Install
+
+```bash
+npm install --legacy-peer-deps
 ```
-  "peerDependencies": {
-    "@emotion/react": "^11.11.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-query": "^3.39.2"
-  },
-```
-## Start the demo application
 
-Before starting the application the first time please execute the steps 1.-3. 
-from the installation instructions.
-
-To run the development server:
+2) Run
 ```bash
 npm run dev
 ```
 
-## Install instructions
+## Implementation
 
-To use a widget in an application follow these steps:
+Click [here](https://ts4nfdi.github.io/terminology-service-suite/comp/latest/) for detailed instructions on how to implement the
+package.
 
-1) Create an .npmrc file in root directory with your PAT (TOKEN)
-```
-//npm.pkg.github.com/:_authToken=TOKEN
-@nfdi4health:registry=https://npm.pkg.github.com
-```
-2) Install peer dependencies
-```
-npm install @elastic/eui@62.1.0 @emotion/react@11.11.3 react@17.0.2 react-dom@17.0.2 react-query@3.39.2
-```
-
-For dependency issues, try installing with the `--legacy-peer-deps` flag.
-
-3) Install the package
-```
-npm install @nfdi4health/semlookp-widgets
-```
-4) Wrap components with the Elastic UI Provider (required for the ElasticUI design library)
-```
-import {EuiProvider} from "@elastic/eui";
-<EuiProvider>YOUR COMPONENTS</EuiProvider>
-```
-5) Wrap the components in a QueryClientProvider (required for the react-query library)
-```
-import {QueryClient, QueryClientProvider} from "react-query";
-const queryClient = new QueryClient();
-<QueryClientProvider client={queryClient}>YOUR COMPONENTS</QueryClientProvider>
-```
-6) Import light theme (styling)
-```
-import "@elastic/eui/dist/eui_theme_light.css";
-```
-7) Add widget
-```
-<AutocompleteWidget
-api="https://semanticlookup.zbmed.de/ols/api/"
-hasShortSelectedLabel
-parameter="ontology=mesh,efo&type=class&collection=nfdi4health"
-placeholder="Search for Term"
-selectionChangedEvent={function noRefCheck() {
-}}
-allowCustomTerms={false}/>
-```
-
-
-
-
-
+A sample integration is shown in `MainPage.tsx`.

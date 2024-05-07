@@ -10,17 +10,17 @@
   },
   "dependencies": {
     "@elastic/datemath": "^5.0.3",
-    "@elastic/eui": "^91.2.0",
+    "@elastic/eui": "62.1.0",
     "@emotion/css": "^11.11.2",
-    "@emotion/react": "^11.11.1",
-    "@nfdi4health/semlookp-widgets": "^1.13.1",
+    "@emotion/react": "11.11.3",
+    "@ts4nfdi/terminology-service-suite": "2.0.0",
     "axios": "^1.6.2",
     "moment": "^2.29.4",
     "next": "14.0.4",
     "prop-types": "^15.8.1",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-query": "^3.39.3"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-query": "3.39.2"
   },
   "devDependencies": {
     "@types/node": "^20",

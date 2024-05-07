@@ -1,6 +1,6 @@
 import React from 'react';
 import { EuiFlexGroup, EuiFlexItem, EuiPage, EuiPageBody, EuiPanel, EuiSpacer, EuiTitle } from '@elastic/eui';
-import { AutocompleteWidget, BreadcrumbWidget, DataContentWidget, MetadataWidget } from '@nfdi4health/semlookp-widgets'
+import { AutocompleteWidget, BreadcrumbWidget, DataContentWidget, MetadataWidget } from '@ts4nfdi/terminology-service-suite'
 
 export function MainPage() {
     return (
