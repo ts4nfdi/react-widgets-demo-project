@@ -15,7 +15,7 @@
     "@emotion/react": "^11.13.5",
     "@ts4nfdi/terminology-service-suite": "4.4.2",
     "axios": "^1.6.2",
-    "next": "15.1.6",
+    "next": "15.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-query": "3.39.2"
