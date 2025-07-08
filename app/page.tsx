@@ -1,16 +1,16 @@
-'use client';
+import ClientWrapper from "./ClientWrapper";
+import React from 'react'
+import {entityObject, getBreadcrumbData} from "@ts4nfdi/terminology-service-suite/server";
 
-import { EuiProvider } from "@elastic/eui";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { MainPage } from '@/app/MainPage'
 
-export default function Home() {
-    const queryClient = new QueryClient();
+export default async function Home() {
+    const widgetData: entityObject = await getBreadcrumbData({
+        api: "https://semanticlookup.zbmed.de/ols/api/",
+        iri: "http://purl.obolibrary.org/obo/NCIT_C2985",
+        useLegacy: false,
+    })
+
     return (
-        <EuiProvider>
-            <QueryClientProvider client={queryClient}>
-                <MainPage/>
-            </QueryClientProvider>
-        </EuiProvider>
+        <ClientWrapper widgetData={widgetData}/>
     )
 }

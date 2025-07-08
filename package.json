@@ -11,9 +11,9 @@
   "registry": "https://npm.pkg.github.com/",
   "dependencies": {
     "@elastic/datemath": "^5.0.3",
-    "@elastic/eui": "^97.3.1",
+    "@elastic/eui": "^102.1.0",
     "@emotion/react": "^11.13.5",
-    "@ts4nfdi/terminology-service-suite": "4.4.2",
+    "@ts4nfdi/terminology-service-suite": "5.5.1",
     "axios": "^1.6.2",
     "next": "15.2.3",
     "react": "^18.3.1",
