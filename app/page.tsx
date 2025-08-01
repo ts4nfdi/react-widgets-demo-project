@@ -1,16 +1,11 @@
-import ClientWrapper from "./ClientWrapper";
 import React from 'react'
-import {entityObject, getBreadcrumbData} from "@ts4nfdi/terminology-service-suite/server";
+import { PageClient } from "./PageClient"
 
-
-export default async function Home() {
-    const widgetData: entityObject = await getBreadcrumbData({
-        api: "https://semanticlookup.zbmed.de/ols/api/",
-        iri: "http://purl.obolibrary.org/obo/NCIT_C2985",
-        useLegacy: false,
-    })
+export default function Home() {
 
     return (
-        <ClientWrapper widgetData={widgetData}/>
+        // Either use PageClient or PageServer
+        <PageClient/>
+        // <PageServer/>
     )
 }
