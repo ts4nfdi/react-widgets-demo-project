@@ -1,7 +1,21 @@
 'use client'
 
 import React from 'react'
-import {AutocompleteWidget, BreadcrumbWidget, DataContentWidget} from "@ts4nfdi/terminology-service-suite";
+import {
+    AutocompleteWidget,
+    BreadcrumbWidget,
+    CrossRefTabWidget,
+    DataContentWidget,
+    EntityDefinedByWidget,
+    EntityInfoWidget,
+    EntityOntoListWidget,
+    EntityRelationsWidget,
+    GraphViewWidget, HierarchyWidget,
+    SearchBarWidget,
+    SearchResultsListWidget,
+    TabWidget,
+    TermDepictionWidget
+} from "@ts4nfdi/terminology-service-suite";
 import {QueryClient, QueryClientProvider} from "react-query";
 
 
@@ -19,6 +33,11 @@ export function PageClient() {
         <div className="grid-container" style={{gap: "20px", width: "800px", margin: "50px"}}>
 
             <QueryClientProvider client={queryClient}>
+
+
+
+
+
 
                 <div style={{gap: "20px", width: "200px", margin: "50px"}}>
                     <h3 style={{margin: "10px"}}>BreadcrumbWidget: </h3>
