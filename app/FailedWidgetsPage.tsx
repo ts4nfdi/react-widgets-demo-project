@@ -1,7 +1,7 @@
 import {
-    EntityDefinedByWidget, EntityOntoListWidget,
+    EntityDefinedByWidget,
     // BreadcrumbPresentation,
-    EntityRelationsWidget, GraphViewWidget, HierarchyWidget,
+    EntityRelationsWidget, GraphViewWidget, HierarchyWidget, OntologyInfoWidget, ResourcesWidget,
     SearchResultsListWidget, TabWidget
 } from "@ts4nfdi/terminology-service-suite";
 import React from "react";
@@ -10,7 +10,7 @@ export default function FailedWidgetsPage(){
     return(
         <div>
 
-            {/*the dots on the numbers, paginations*/}
+            {/* dots on the numbers, pagination*/}
             <SearchResultsListWidget
                 api="https://semanticlookup.zbmed.de/ols/api/"
                 initialItemsPerPage={10}
@@ -28,38 +28,6 @@ export default function FailedWidgetsPage(){
             />
 
 
-            {/*the ui difference , without css */}
-            <EntityRelationsWidget
-                api="https://www.ebi.ac.uk/ols4/api/"
-                entityType="term"
-                hasTitle
-                iri="http://purl.obolibrary.org/obo/AGRO_00000002"
-                onNavigateToDisambiguate={function dye(){}}
-                onNavigateToEntity={function dye(){}}
-                onNavigateToOntology={function dye(){}}
-                ontologyId="agro"
-                parameter=""
-                showBadges
-            />
-
-
-
-            {/*problem with importing*/}
-            {/*<BreadcrumbPresentation*/}
-            {/*    className=""*/}
-            {/*    colorFirst=""*/}
-            {/*    colorSecond=""*/}
-            {/*    entity={{*/}
-            {/*        properties: {*/}
-            {/*            iri: 'http://purl.obolibrary.org/obo/NCIT_C2985',*/}
-            {/*            ontologyId: 'ncit',*/}
-            {/*            shortForm: 'NCIT_C2985'*/}
-            {/*        }*/}
-            {/*    }}*/}
-            {/*    onNavigateToOntology={function dye(){}}*/}
-            {/*    ontologyId=""*/}
-            {/*    shortForm=""*/}
-            {/*/>*/}
 
 
             {/*nothing was shown */}
@@ -73,35 +41,9 @@ export default function FailedWidgetsPage(){
             />
 
 
-            {/*nothing was fetched*/}
-            <EntityOntoListWidget
-                api="https://terminology.services.base4nfdi.de/api/"
-                entityType="class"
-                iri="http://www.ebi.ac.uk/efo/EFO_0000400"
-                ontologyId="efo"
-                onNavigateToOntology={() => {}}
-            />
 
 
-             {/*bad ui*/}
-            <TabWidget
-                altNamesTab
-                api="https://semanticlookup.zbmed.de/ols/api/"
-                crossRefTab
-                entityType="term"
-                hierarchyTab
-                iri="http://purl.obolibrary.org/obo/HP_0000819"
-                onNavigateToDisambiguate={function dye(){}}
-                onNavigateToEntity={function dye(){}}
-                onNavigateToOntology={function dye(){}}
-                ontologyId="hp"
-                parameter="collection=nfdi4health"
-                terminologyInfoTab
-                useLegacy
-            />
-
-
-            {/*bad ui and small error*/}
+            {/*we have an error*/}
             {/*<GraphViewWidget*/}
             {/*    api="https://api.terminology.tib.eu/api/"*/}
             {/*    iri="http://purl.obolibrary.org/obo/CHEBI_24870"*/}
@@ -112,17 +54,37 @@ export default function FailedWidgetsPage(){
             {/*/>*/}
 
 
-            {/* bad ui */}
-            <HierarchyWidget
-                apiKey=""
-                apiUrl="https://www.ebi.ac.uk/ols4/api/"
-                backendType="ols"
-                entityType="class"
-                iri="http://www.ebi.ac.uk/efo/EFO_0000400"
+
+            {/* everything is the same as the tss website, except the color of the Ontology IRI link.*/}
+            <OntologyInfoWidget
+                api="https://semanticlookup.zbmed.de/ols/api/"
+                hasTitle
+                onNavigateToDisambiguate={function dye(){}}
                 onNavigateToEntity={function dye(){}}
                 onNavigateToOntology={function dye(){}}
-                ontologyId="efo"
-                // parameter=""
+                ontologyId="atc"
+                parameter=""
+                showBadges
+                useLegacy
+            />
+
+
+            {/*bad ui */}
+            <ResourcesWidget
+                actions={[]}
+                api="https://semanticlookup.zbmed.de/ols/api/"
+                initialEntriesPerPage={100}
+                initialSortDir="asc"
+                initialSortField="config.preferredPrefix"
+                onNavigate={function dye(){}}
+                pageSizeOptions={[
+                    10,
+                    25,
+                    50,
+                    100
+                ]}
+                parameter="collection=nfdi4health"
+                useLegacy
             />
 
 

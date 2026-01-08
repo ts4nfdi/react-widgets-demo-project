@@ -2,19 +2,20 @@
 
 import React from 'react'
 import {
-    AutocompleteWidget,
+    AlternativeNameTabWidget,
+    AutocompleteWidget, BreadcrumbPresentation,
     BreadcrumbWidget,
     CrossRefTabWidget,
-    DataContentWidget,
+    DataContentWidget, DescriptionWidget,
     EntityDefinedByWidget,
     EntityInfoWidget,
     EntityOntoListWidget,
     EntityRelationsWidget,
-    GraphViewWidget, HierarchyWidget,
+    GraphViewWidget, HierarchyWidget, IriWidget, JsonApiWidget, MetadataWidget, OntologyInfoWidget, ResourcesWidget,
     SearchBarWidget,
     SearchResultsListWidget,
     TabWidget,
-    TermDepictionWidget
+    TermDepictionWidget, TitleWidget
 } from "@ts4nfdi/terminology-service-suite";
 import {QueryClient, QueryClientProvider} from "react-query";
 
