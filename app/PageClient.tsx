@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { EuiPageHeader, EuiSpacer, EuiText } from '@elastic/eui';
+import SearchWidgets from "@/app/Widgets/additional entity metadata widgets/searchWidgets";
 
 export function PageClient() {
     const [queryClient] = useState(() => new QueryClient());
@@ -59,9 +60,8 @@ export function PageClient() {
     const tabContent = useMemo(() => {
         switch (tabSelected) {
             case 'tab1':
-                return (
-                        <h2>tab 1</h2>
-                );
+                return <SearchWidgets/>;
+
             case 'tab2':
                 return (
                         <h2>tab 2</h2>
