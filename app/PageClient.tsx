@@ -97,6 +97,37 @@ export function PageClient() {
 
 
 
+                <div style={{ gap: '20px', width: '300px', margin: '50px' }}>
+                    <h3 style={{ margin: '10px' }}>DataContentWidget: </h3>
+                    <DataContentWidget api="https://semanticlookup.zbmed.de/ols/api/" />
+                </div>
+
+
+
+                <EntityDefinedByWidget
+                    api="https://www.ebi.ac.uk/ols4/api/"
+                    entityType="term"
+                    iri="http://www.ebi.ac.uk/efo/EFO_0000400"
+                    onNavigateToOntology={function dye() {}}
+                    ontologyId="efo"
+                    parameter=""
+                />
+
+                <div style={{ gap: '20px', width: '200px', margin: '50px' }}>
+                    <h3 style={{ margin: '10px' }}>BreadcrumbWidget: </h3>
+                    <BreadcrumbWidget
+                        api="https://semanticlookup.zbmed.de/ols/api/"
+                        iri="http://purl.obolibrary.org/obo/NCIT_C2985"
+                    />
+                </div>
+
+
+
+
+
+
+
+
             </QueryClientProvider>
         </div>
     )
