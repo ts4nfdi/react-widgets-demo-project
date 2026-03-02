@@ -1,7 +1,7 @@
 import {
     EntityDefinedByWidget,
     // BreadcrumbPresentation,
-    EntityRelationsWidget, GraphViewWidget, HierarchyWidget, OntologyInfoWidget, ResourcesWidget,
+    EntityRelationsWidget, GraphViewWidget, OntologyInfoWidget, ResourcesWidget,
     SearchResultsListWidget, TabWidget
 } from "@ts4nfdi/terminology-service-suite";
 import React from "react";

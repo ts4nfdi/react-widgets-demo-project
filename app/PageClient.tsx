@@ -6,6 +6,9 @@ import { EuiPageHeader, EuiSpacer, EuiText } from '@elastic/eui';
 import SearchWidgets from "@/app/Widgets/Search widgets/searchWidgets";
 import TerminologyServiceWidget from "@/app/Widgets/Terminology service widgets/terminologyServiceWidget";
 import AdditionalEntityMetadata from "@/app/Widgets/additional entity metadata widgets/additionalEntityMetadata";
+import HierarchyGraphWidgets from "@/app/Widgets/hierarchy and graph widgets/HierarchyGraphWidgets";
+import EntityMetaDataWidget from "@/app/Widgets/entity metadata widgets/entityMetaDataWidget";
+import OntologyMetadataWidget from "@/app/Widgets/ontology metadata widgets/ontologyMetadataWidget";
 
 export function PageClient() {
     const [queryClient] = useState(() => new QueryClient());
@@ -71,17 +74,14 @@ export function PageClient() {
                 return <AdditionalEntityMetadata/>
 
             case 'tab4':
-                return (
-                        <h2>tab 4</h2>
-                );
+                return <HierarchyGraphWidgets/>
+
             case 'tab5':
-                return (
-                        <h2>tab 5</h2>
-                );
+                return <EntityMetaDataWidget/>
+
             case 'tab6':
-                return (
-                        <h2>tab 6</h2>
-                );
+                return <OntologyMetadataWidget/>
+
             default:
                 return null;
         }
