@@ -3,7 +3,9 @@
 import React, { useMemo, useState } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { EuiPageHeader, EuiSpacer, EuiText } from '@elastic/eui';
-import SearchWidgets from "@/app/Widgets/additional entity metadata widgets/searchWidgets";
+import SearchWidgets from "@/app/Widgets/Search widgets/searchWidgets";
+import TerminologyServiceWidget from "@/app/Widgets/Terminology service widgets/terminologyServiceWidget";
+import AdditionalEntityMetadata from "@/app/Widgets/additional entity metadata widgets/additionalEntityMetadata";
 
 export function PageClient() {
     const [queryClient] = useState(() => new QueryClient());
@@ -63,13 +65,11 @@ export function PageClient() {
                 return <SearchWidgets/>;
 
             case 'tab2':
-                return (
-                        <h2>tab 2</h2>
-                );
+                return <TerminologyServiceWidget/>
+
             case 'tab3':
-                return (
-                        <h2>tab 3</h2>
-                );
+                return <AdditionalEntityMetadata/>
+
             case 'tab4':
                 return (
                         <h2>tab 4</h2>

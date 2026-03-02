@@ -30,7 +30,7 @@ export default function FailedWidgetsPage(){
 
 
 
-            {/*nothing was shown */}
+            {/*nothing was shown even I tried different controls but in the stories sth was created but in the default state nothing was shown :( */}
             <EntityDefinedByWidget
                 api="https://www.ebi.ac.uk/ols4/api/"
                 entityType="term"
