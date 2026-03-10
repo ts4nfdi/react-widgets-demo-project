@@ -98,3 +98,5 @@ export function PageClient() {
         </div>
     );
 }
+
+// The bottom left side lists the project issues. What should be done about them?

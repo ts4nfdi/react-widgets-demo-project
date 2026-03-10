@@ -1,5 +1,6 @@
 import {AutocompleteWidget, SearchBarWidget, SearchResultsListWidget} from "@ts4nfdi/terminology-service-suite";
-import "../style.css"
+import "../../styles/widgets-layout.css"
+import "../../styles/SearchResultStyle.css";
 
 export default function SearchWidgets() {
     return(
@@ -38,7 +39,6 @@ export default function SearchWidgets() {
 
             {/* When you click the pagination, it takes a while to load because the data has to be fetched. It’s better to show a loading icon.*/}
             {/*I searched "vein" and in the results, one of them was odd*/}
-            {/*it has css/ui issue: dots on the pagination numbers*/}
             <section className="widget-section">
                 <h3 style={{ margin: '10px' }}>SearchResultsListWidget: </h3>
                 <SearchResultsListWidget

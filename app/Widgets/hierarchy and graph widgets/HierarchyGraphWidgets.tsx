@@ -1,4 +1,4 @@
-import "../style.css"
+import "../../styles/widgets-layout.css"
 import {GraphViewWidget, HierarchyWidget} from "@ts4nfdi/terminology-service-suite";
 
 export default function HierarchyGraphWidgets(){

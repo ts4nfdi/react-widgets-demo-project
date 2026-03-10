@@ -4,7 +4,7 @@ import {
     IriWidget,
     MetadataWidget, TitleWidget
 } from "@ts4nfdi/terminology-service-suite";
-import "../style.css"
+import "../../styles/widgets-layout.css"
 
 export default function EntityMetaDataWidget(){
     return(
