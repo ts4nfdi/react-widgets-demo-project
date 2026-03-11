@@ -63,6 +63,7 @@ export default function AdditionalEntityMetadata(){
             </section>
 
 
+            {/*It keeps saying No ontology name available -> No short form available*/}
             <section className="widget-section">
                 <h3>BreadcrumbWidget:</h3>
                 <BreadcrumbWidget
@@ -79,8 +80,12 @@ export default function AdditionalEntityMetadata(){
                     api="https://www.ebi.ac.uk/ols4/api/"
                     entityType="term"
                     iri="http://www.ebi.ac.uk/efo/EFO_0000400"
-                    onNavigateToOntology={function dye(){}}
-                    ontologyId="efo"
+                    onNavigateToOntology={
+                        (ontologyId: string, entityType?: string, entity?: { iri: string, label?: string }) => {
+                            console.log('Triggered onNavigateToOntology()' + (entityType ? ` for ${entityType || "entity"}` : '') + ((entity && entity.label) ? ` "${entity.label}"` : '') + ((entity && entity.iri) ? ` (iri="${entity.iri}")` : '') + ` for ontologyId "${ontologyId}".`);
+                        }
+                    }
+                    ontologyId="ons"
                     parameter=""
                 />
                 <p> noting is here hahahaha :)</p>
