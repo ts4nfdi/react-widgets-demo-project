@@ -36,9 +36,6 @@ export default function SearchWidgets() {
             </section>
 
 
-
-            {/* When you click the pagination, it takes a while to load because the data has to be fetched. It’s better to show a loading icon.*/}
-            {/*I searched "vein" and in the results, one of them was odd*/}
             <section className="widget-section">
                 <h3 style={{ margin: '10px' }}>SearchResultsListWidget: </h3>
                 <SearchResultsListWidget
