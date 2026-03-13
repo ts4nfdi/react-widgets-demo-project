@@ -4,8 +4,6 @@ import {GraphViewWidget, HierarchyWidget} from "@ts4nfdi/terminology-service-sui
 export default function HierarchyGraphWidgets(){
     return(
         <div className="widgets-style">
-            {/*the onNavigateTo should be commented out since it has an error*/}
-            {/*got solved in the main project*/}
             <section className="widget-section">
                 <h3>GraphViewWidget:</h3>
                 <GraphViewWidget

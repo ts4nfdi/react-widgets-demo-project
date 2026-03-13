@@ -63,7 +63,6 @@ export default function AdditionalEntityMetadata(){
             </section>
 
 
-            {/*It keeps saying No ontology name available -> No short form available*/}
             <section className="widget-section">
                 <h3>BreadcrumbWidget:</h3>
                 <BreadcrumbWidget
@@ -92,7 +91,6 @@ export default function AdditionalEntityMetadata(){
             </section>
 
 
-            {/*it works only with useLegacy, if you do not write it, it won't be shown */}
             <section className="widget-section">
                 <h3>EntityOntoListWidget:</h3>
                 <EntityOntoListWidget
