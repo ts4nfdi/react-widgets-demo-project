@@ -1,4 +1,9 @@
-import {AutocompleteWidget, SearchBarWidget, SearchResultsListWidget} from "@ts4nfdi/terminology-service-suite";
+import {
+    AutocompleteWidget,
+    SearchBarWidget,
+    SearchResultsListWidget,
+    WrappedEntityListWidget
+} from "@ts4nfdi/terminology-service-suite";
 import "../../styles/widgets-layout.css"
 import "../../styles/SearchResultStyle.css";
 
@@ -55,6 +60,16 @@ export default function SearchWidgets() {
                 />
             </section>
 
+
+            <section className="widget-section">
+                <h3 style={{ margin: '10px' }}>SearchResultsListWidget: </h3>
+                <WrappedEntityListWidget
+                    api="https://semanticlookup.zbmed.de/ols/api/"
+                    entityType="term"
+                    ontologyId="mesh"
+                    parameter=""
+                />
+            </section>
 
 
 
