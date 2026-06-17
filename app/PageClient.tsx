@@ -1,8 +1,21 @@
 'use client'
 
 import React from 'react'
-import {AutocompleteWidget, BreadcrumbWidget, DataContentWidget} from "@ts4nfdi/terminology-service-suite";
-import {QueryClient, QueryClientProvider} from "react-query";
+const BreadcrumbWidget = dynamic(
+    () => import("@ts4nfdi/terminology-service-suite").then((mod) => mod.BreadcrumbWidget),
+    { ssr: false }
+);
+
+const AutocompleteWidget = dynamic(
+    () => import("@ts4nfdi/terminology-service-suite").then((mod) => mod.AutocompleteWidget),
+    { ssr: false }
+);
+
+const DataContentWidget = dynamic(
+    () => import("@ts4nfdi/terminology-service-suite").then((mod) => mod.DataContentWidget),
+    { ssr: false }
+);import {QueryClient, QueryClientProvider} from "react-query";
+import dynamic from "next/dynamic";
 
 
 export function PageClient() {
