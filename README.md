@@ -5,11 +5,7 @@ For this demo, a Next.js app was set up with `Node.js v18.18.0`.
 
 ## Install and run the demo application
 
-1) Authenticate
-Copy your GitHub PAT into the `.npmrc` file. 
-Click [here](https://ts4nfdi.github.io/terminology-service-suite/comp/latest/) for detailed instructions of the authentication process.
-
-2) Install
+1) Install
 The widgets are developed with React 17. 
 If the consumer app uses React > 17, the `--legacy-peer-deps` flag must be set during installation. 
 We are in the process of testing the widgets with React versions > 17, but there may still be unwanted behavior.
@@ -17,7 +13,7 @@ We are in the process of testing the widgets with React versions > 17, but there
 npm install --legacy-peer-deps
 ```
 
-3) Run
+2) Run
 ```bash
 npm run dev
 ```
