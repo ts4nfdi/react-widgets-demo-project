@@ -18,10 +18,21 @@ to start the app in development mode.
 
 ## Implementation
 
-Click [here](https://ts4nfdi.github.io/terminology-service-suite/comp/latest/) for detailed instructions on how to implement the
-package.
+This project uses the `@ts4nfdi/terminology-service-suite` package to display Terminology Service widgets in a Next.js app.
 
-A sample integration is shown in `MainPage.tsx`.
+The package is already installed in this demo project. If you want to use the same widgets in your own project, install the package with:
+
+```bash
+npm install @ts4nfdi/terminology-service-suite
+```
+
+Then import the widget you need into your React component and add it to your page.
+
+You can find the full list of available widgets, their properties, and usage examples in the Storybook documentation:
+
+https://ts4nfdi.github.io/terminology-service-suite/comp/latest/
+
+In this demo project, you can see an example implementation in `MainPage.tsx`
 
 
 ## React Next.js Widgets Demo Project - Docker Usage
