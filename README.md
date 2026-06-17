@@ -6,11 +6,8 @@ For this demo, a Next.js app was set up with `Node.js v18.18.0`.
 ## Install and run the demo application
 
 1) Install
-The widgets are developed with React 17. 
-If the consumer app uses React > 17, the `--legacy-peer-deps` flag must be set during installation. 
-We are in the process of testing the widgets with React versions > 17, but there may still be unwanted behavior.
 ```bash
-npm install --legacy-peer-deps
+npm install
 ```
 
 2) Run
@@ -107,4 +104,3 @@ This ensures changes in your local project reflect inside the container.
 ---
 
 This guide helps you build, run, and manage your Next.js application using Docker. Happy coding! 🚀
-
