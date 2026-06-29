@@ -5,19 +5,12 @@ For this demo, a Next.js app was set up with `Node.js v18.18.0`.
 
 ## Install and run the demo application
 
-1) Authenticate
-Copy your GitHub PAT into the `.npmrc` file. 
-Click [here](https://ts4nfdi.github.io/terminology-service-suite/comp/latest/) for detailed instructions of the authentication process.
-
-2) Install
-The widgets are developed with React 17. 
-If the consumer app uses React > 17, the `--legacy-peer-deps` flag must be set during installation. 
-We are in the process of testing the widgets with React versions > 17, but there may still be unwanted behavior.
+1) Install
 ```bash
-npm install --legacy-peer-deps
+npm install
 ```
 
-3) Run
+2) Run
 ```bash
 npm run dev
 ```
@@ -25,10 +18,21 @@ to start the app in development mode.
 
 ## Implementation
 
-Click [here](https://ts4nfdi.github.io/terminology-service-suite/comp/latest/) for detailed instructions on how to implement the
-package.
+This demo project uses widgets from the `@ts4nfdi/terminology-service-suite` package.
 
-A sample integration is shown in `MainPage.tsx`.
+The package is already installed in this project. If you want to use the widgets in another React or Next.js project, install the package first:
+
+```bash
+npm install @ts4nfdi/terminology-service-suite
+```
+
+After installing the package, choose the widget you want to use, import it into your React component, and render it on your page with the required properties.
+
+The easiest way to find the right widget and understand how to configure it is to use the Storybook documentation. Storybook shows the available widgets, their properties, example configurations, and live previews:
+
+[Open the Storybook documentation](https://terminology.services.base4nfdi.de/tss/comp/latest/iframe.html?viewMode=docs&id=overview--docs&globals=#how-to-use-this-storybook)
+
+In this demo project, you can see an example implementation in `MainPage.tsx`.
 
 
 ## React Next.js Widgets Demo Project - Docker Usage
@@ -111,4 +115,3 @@ This ensures changes in your local project reflect inside the container.
 ---
 
 This guide helps you build, run, and manage your Next.js application using Docker. Happy coding! 🚀
-
