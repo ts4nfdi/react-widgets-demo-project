@@ -1,6 +1,9 @@
 'use client'
 
 import React from 'react'
+import dynamic from "next/dynamic";
+import {QueryClient, QueryClientProvider} from "react-query";
+
 const BreadcrumbWidget = dynamic(
     () => import("@ts4nfdi/terminology-service-suite").then((mod) => mod.BreadcrumbWidget),
     { ssr: false }
@@ -14,9 +17,7 @@ const AutocompleteWidget = dynamic(
 const DataContentWidget = dynamic(
     () => import("@ts4nfdi/terminology-service-suite").then((mod) => mod.DataContentWidget),
     { ssr: false }
-);import {QueryClient, QueryClientProvider} from "react-query";
-import dynamic from "next/dynamic";
-
+);
 
 export function PageClient() {
     const queryClient = new QueryClient();
