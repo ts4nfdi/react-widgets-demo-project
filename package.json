@@ -14,7 +14,7 @@
     "@elastic/eui": "^102.1.0",
     "@emotion/react": "^11.13.5",
     "@ts4nfdi/terminology-service-suite": "5.5.1",
-    "axios": "^1.6.2",
+    "axios": "^1.18.0",
     "next": "^15.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
