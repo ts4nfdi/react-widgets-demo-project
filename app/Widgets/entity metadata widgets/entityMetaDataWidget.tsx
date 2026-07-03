@@ -29,7 +29,8 @@ export default function EntityMetaDataWidget(){
                 <h3>IriWidget:</h3>
                 <IriWidget
                     className=""
-                    color="danger"
+                    color="text"
+                    copyButton="left"
                     externalIcon
                     iri="http://purl.obolibrary.org/obo/NCIT_C2985"
                     iriText=""
