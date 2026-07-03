@@ -10,10 +10,10 @@ export default function OntologyMetadataWidget(){
                 <OntologyInfoWidget
                     api="https://semanticlookup.zbmed.de/ols/api/"
                     hasTitle
-                    onNavigateToDisambiguate={function dye(){}}
-                    onNavigateToEntity={function dye(){}}
-                    onNavigateToOntology={function dye(){}}
-                    ontologyId="atc"
+                    onNavigateToDisambiguate={function bge(){}}
+                    onNavigateToEntity={function bge(){}}
+                    onNavigateToOntology={function bge(){}}
+                    ontologyId="ncit"
                     parameter=""
                     showBadges
                     useLegacy
