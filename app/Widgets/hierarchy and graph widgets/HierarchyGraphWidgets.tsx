@@ -24,14 +24,14 @@ export default function HierarchyGraphWidgets(){
                     apiUrl="https://www.ebi.ac.uk/ols4/api/"
                     backendType="ols"
                     entityType="class"
-                    iri="http://www.ebi.ac.uk/efo/EFO_0000400"
-                    onNavigateToEntity={function dye(){}}
-                    onNavigateToOntology={function dye(){}}
+                    iri="http://purl.obolibrary.org/obo/MONDO_0005015"
+                    onNavigateToEntity={function bge(){}}
+                    onNavigateToOntology={function bge(){}}
                     ontologyId="efo"
                     parameter=""
-                    // showComparisonTitleInHeader
-                    // showHeader
-                    // targetIri=""
+                    showComparisonTitleInHeader
+                    showHeader
+                    targetIri=""
                 />
             </section>
 
