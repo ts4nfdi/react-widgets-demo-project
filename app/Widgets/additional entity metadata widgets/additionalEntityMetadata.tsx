@@ -75,19 +75,15 @@ export default function AdditionalEntityMetadata(){
             {/*nothing was shown even I tried different controls but in the stories sth was created but in the default state nothing was shown :( */}
             <section className="widget-section">
                 <h3>EntityDefinedByWidget:</h3>
-                <EntityDefinedByWidget
+                <EntityOntoListWidget
                     api="https://www.ebi.ac.uk/ols4/api/"
                     entityType="term"
-                    iri="http://www.ebi.ac.uk/efo/EFO_0000400"
-                    onNavigateToOntology={
-                        (ontologyId: string, entityType?: string, entity?: { iri: string, label?: string }) => {
-                            console.log('Triggered onNavigateToOntology()' + (entityType ? ` for ${entityType || "entity"}` : '') + ((entity && entity.label) ? ` "${entity.label}"` : '') + ((entity && entity.iri) ? ` (iri="${entity.iri}")` : '') + ` for ontologyId "${ontologyId}".`);
-                        }
-                    }
-                    ontologyId="ons"
+                    iri="http://purl.obolibrary.org/obo/HP_0000819"
+                    onNavigateToOntology={function bge(){}}
+                    ontologyId="hp"
                     parameter=""
+                    useLegacy
                 />
-                <p> noting is here hahahaha :)</p>
             </section>
 
 
