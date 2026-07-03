@@ -72,17 +72,16 @@ export default function AdditionalEntityMetadata(){
             </section>
 
 
-            {/*nothing was shown even I tried different controls but in the stories sth was created but in the default state nothing was shown :( */}
             <section className="widget-section">
                 <h3>EntityDefinedByWidget:</h3>
-                <EntityOntoListWidget
-                    api="https://www.ebi.ac.uk/ols4/api/"
+                <EntityDefinedByWidget
+                    api="https://semanticlookup.zbmed.de/ols/api/"
                     entityType="term"
-                    iri="http://purl.obolibrary.org/obo/HP_0000819"
+                    iri="http://purl.obolibrary.org/obo/NCBITaxon_10090"
                     onNavigateToOntology={function bge(){}}
-                    ontologyId="hp"
+                    ontologyId="foodon"
                     parameter=""
-                    useLegacy
+                    useLegacy // this parameter is necessary
                 />
             </section>
 
