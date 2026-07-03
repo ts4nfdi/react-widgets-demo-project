@@ -16,7 +16,6 @@ export default function HierarchyGraphWidgets(){
                 />
             </section>
 
-            {/*the last three parameters should be commented out*/}
             <section className="widget-section">
                 <h3>HierarchyWidget:</h3>
                 <HierarchyWidget
