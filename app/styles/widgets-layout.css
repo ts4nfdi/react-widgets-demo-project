@@ -1,0 +1,13 @@
+.widgets-style {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 5rem;
+}
+
+.widget-section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
