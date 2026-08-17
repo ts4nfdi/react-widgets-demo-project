@@ -95,7 +95,7 @@ export default function AdditionalEntityMetadata(){
                     onNavigateToOntology={function dye(){}}
                     ontologyId="efo"
                     parameter=""
-                    useLegacy   // this parameter is necessary
+                    useLegacy
                 />
             </section>
 
