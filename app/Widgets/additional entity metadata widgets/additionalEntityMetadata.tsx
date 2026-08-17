@@ -81,7 +81,7 @@ export default function AdditionalEntityMetadata(){
                     onNavigateToOntology={function bge(){}}
                     ontologyId="foodon"
                     parameter=""
-                    useLegacy // this parameter is necessary
+                    useLegacy
                 />
             </section>
 
