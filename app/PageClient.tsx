@@ -9,6 +9,7 @@ import AdditionalEntityMetadata from "@/app/Widgets/additional entity metadata w
 import HierarchyGraphWidgets from "@/app/Widgets/hierarchy and graph widgets/HierarchyGraphWidgets";
 import EntityMetaDataWidget from "@/app/Widgets/entity metadata widgets/entityMetaDataWidget";
 import OntologyMetadataWidget from "@/app/Widgets/ontology metadata widgets/ontologyMetadataWidget";
+import Mapping from "@/app/Widgets/mapping/Mapping";
 
 export function PageClient() {
     const [queryClient] = useState(() => new QueryClient());
@@ -59,6 +60,12 @@ export function PageClient() {
                 isSelected: tabSelected === 'tab6',
                 onClick: () => setTabSelected('tab6'),
             },
+            {
+                id: 'tab7',
+                label: 'mapping',
+                isSelected: tabSelected === 'tab7',
+                onClick: () => setTabSelected('tab7'),
+            },
         ];
     }, [tabSelected]);
 
@@ -82,6 +89,9 @@ export function PageClient() {
             case 'tab6':
                 return <OntologyMetadataWidget/>
 
+            case 'tab7':
+                return <Mapping/>
+
             default:
                 return null;
         }
@@ -98,5 +108,3 @@ export function PageClient() {
         </div>
     );
 }
-
-// The bottom left side lists the project issues. What should be done about them?
