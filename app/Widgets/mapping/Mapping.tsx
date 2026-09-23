@@ -6,10 +6,12 @@ export default function Mapping(){
         <div className="widgets-style">
             <section className="widget-section">
                 <h3>OntologyInfoWidget:</h3>
-            <WrappedMappingListWidget
-                api="https://coli-conc.gbv.de/api/"
-                source="https://openenergyplatform.org/ontology/oeo/OEO_00000150"
-            />
+                <WrappedMappingListWidget
+                    MappingDetailBackgroundColor="#efebee"
+                    api="https://coli-conc.gbv.de/api/"
+                    iri="https://openenergyplatform.org/ontology/oeo/OEO_00000150"
+                    rowColor="#fff5fa"
+                />
             </section>
         </div>
     )
